@@ -25,6 +25,7 @@ namespace AIM.ElevatorControl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton(typeof(IElevator), new Elevator());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
